@@ -1,0 +1,15 @@
+name: 'check-org-members-enable-mfa'
+description: 'Check that members of a GitHub organziation have multi-factor authentication enabled'
+author: 'jafow <jared.a.fowler@gmail.com>'
+branding:
+  icon: 'box'
+  color: 'green'
+inputs: 
+  GITHUB_ORG:
+    description: 'the name of the GitHub org'
+    required: true
+  GITHUB_ORG_OWNER_TOKEN:
+    description: 'Reading member 2fa status requires a token having admin rights on an org. This is that token.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

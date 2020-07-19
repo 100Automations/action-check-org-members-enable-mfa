@@ -14,8 +14,8 @@ WORKDIR /app
 RUN npm ci
 
 WORKDIR /
-
-COPY main.js /app/
+COPY main.js entrypoint.sh /app/
 
 WORKDIR /app
-CMD ["node", "main.js"]
+RUN chmod u+x entrypoint.sh
+ENTRYPOINT ["./entrypoint.sh"]
