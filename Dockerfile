@@ -8,13 +8,15 @@ LABEL "com.github.actions.color"="pink"
 ENV VERSION "0.1.0"
 COPY LICENSE README.md /
 
-COPY package*.json /app/
+COPY package.json /app/
+COPY package-lock.json /app/
 
 WORKDIR /app
 RUN npm ci
 
 WORKDIR /
-COPY main.js entrypoint.sh /app/
+COPY main.js /app/
+COPY entrypoint.sh /app/
 
 WORKDIR /app
 RUN chmod u+x entrypoint.sh
