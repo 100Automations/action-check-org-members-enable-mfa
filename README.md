@@ -26,10 +26,16 @@ members on an org using the `2fa_disabled` filter which [is only available to
 org
 owners](https://docs.github.com/en/rest/reference/orgs#list-organization-members).
 
-:eyes: using the default `GITHUB_SECRET` provided by github on the action
-probably will not work and will result in an error message like
-`Error: membersMissing2fa; name: HttpError, status: 422, msg: Only owners can
-use this filter.`
+:eyes::warning: Using the default `GITHUB_SECRET` provided to the action
+probably will not work and will result in an error message like:
+
+```bash
+Error: membersMissing2fa; name: HttpError, status: 422, msg: Only owners can
+use this filter.
+```
+
+That means you'll need to create the [`GITHUB_ORG_OWNER_TOKEN`
+secret](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets#creating-encrypted-secrets-for-a-repository) explicitly.
 
 # license
 GPL-v2.0
