@@ -12,4 +12,4 @@ inputs:
     description: 'Reading member 2fa status requires a token having admin rights on an org. This is that token.'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: './Dockerfile'
