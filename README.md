@@ -11,17 +11,17 @@ repos that they are collaborators on.
 - name: Check that org collaborators have 2fa enabled
   uses: 100Automations/action-check-org-members-enable-mfa@main  
   env:
-    GITHUB_ORG: 'my-org'
-    GITHUB_TOKEN: ${{ secrets.ORG_OWNER_TOKEN }}
+    ORGANIZATION: 'my-org'
+    ORG_OWNER_TOKEN: ${{ secrets.ORG_OWNER_TOKEN }}
 ```
 
 # inputs
 
-### `GITHUB_ORG`
+### `ORGANIZATION`
 the name of the github organzation.
 
-### `GITHUB_TOKEN`
-A token having owner status on the `GITHUB_ORG`. This action lists
+### `ORG_OWNER_TOKEN`
+A token having owner status on the `ORGANIZATION`. This action lists
 members on an org using the `2fa_disabled` filter which [is only available to
 org
 owners](https://docs.github.com/en/rest/reference/orgs#list-organization-members).
