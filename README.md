@@ -9,7 +9,7 @@ repos that they are collaborators on.
 
 ```yaml
 - name: Check that org collaborators have 2fa enabled
-  uses: 100Automations/action-check-org-members-enable-mfa@master  
+  uses: 100Automations/action-check-org-members-enable-mfa@main  
   env:
     GITHUB_ORG: 'my-org'
     GITHUB_ORG_OWNER_TOKEN: ${{ secrets.GITHUB_ORG_OWNER_TOKEN }}
