@@ -12,7 +12,7 @@ repos that they are collaborators on.
   uses: 100Automations/action-check-org-members-enable-mfa@main  
   env:
     GITHUB_ORG: 'my-org'
-    GITHUB_ORG_OWNER_TOKEN: ${{ secrets.GITHUB_ORG_OWNER_TOKEN }}
+    GITHUB_TOKEN: ${{ secrets.ORG_OWNER_TOKEN }}
 ```
 
 # inputs
@@ -20,7 +20,7 @@ repos that they are collaborators on.
 ### `GITHUB_ORG`
 the name of the github organzation.
 
-### `GITHUB_ORG_OWNER_TOKEN`
+### `GITHUB_TOKEN`
 A token having owner status on the `GITHUB_ORG`. This action lists
 members on an org using the `2fa_disabled` filter which [is only available to
 org
@@ -34,7 +34,7 @@ Error: membersMissing2fa; name: HttpError, status: 422, msg: Only owners can
 use this filter.
 ```
 
-That means you'll need to create the [`GITHUB_ORG_OWNER_TOKEN`
+That means you'll need to create the [`ORG_OWNER_TOKEN`
 secret](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets#creating-encrypted-secrets-for-a-repository) explicitly.
 
 # license
