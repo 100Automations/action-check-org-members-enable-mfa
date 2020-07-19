@@ -18,4 +18,4 @@ COPY main.js entrypoint.sh /app/
 
 WORKDIR /app
 RUN chmod u+x entrypoint.sh
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["/app/entrypoint.sh"]

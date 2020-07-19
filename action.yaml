@@ -8,7 +8,7 @@ inputs:
   GITHUB_ORG:
     description: 'the name of the GitHub org'
     required: true
-  GITHUB_ORG_OWNER_TOKEN:
+  GITHUB_TOKEN:
     description: 'Reading member 2fa status requires a token having admin rights on an org. This is that token.'
 runs:
   using: 'docker'
