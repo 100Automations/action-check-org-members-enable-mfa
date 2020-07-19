@@ -17,8 +17,10 @@ Look [to this link to learn how  to do that.](https://github.blog/2013-09-03-two
       try {
         let assignedSuccess = await cherp.openAssignedIssue(repo = repo, assignee = collaboratorToNotify.login, issueMessage)
         console.log(`Success: assigned issue ${assignedSuccess.issueUrl} to ${assignedSuccess.login}`)
+        process.exit(0)
       } catch (err) {
         console.error('Error opening assigned issue;', err)
+        process.exit(1)
       }
     })
   }
