@@ -9,6 +9,6 @@
   "author": "Jared Fowler <jared.a.fowler@gmail.com>",
   "license": "GPL-2.0",
   "dependencies": {
-    "cherp": "0.1.0-beta.3"
+    "cherp": "0.1.0-beta.4"
   }
 }
